@@ -102,6 +102,9 @@ module ActiveSupport
       # either be a string or a regular expression. The replacement should
       # always be a string that may include references to the matched data from
       # the rule.
+
+      # inflect.plural(/(octop|vir)us$/i, '\1i')
+
       def plural(rule, replacement)
         @uncountables.delete(rule) if rule.is_a?(String)
         @uncountables.delete(replacement)
